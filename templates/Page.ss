@@ -352,8 +352,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/{$ThemeDir}/assets/js/jquery.js"></script>
-    <script src="/{$ThemeDir}/dist/js/bootstrap.min.js"></script>
-    <script src="/{$ThemeDir}/assets/js/holder.js"></script>
+    <script src="{$ThemeDir}/assets/js/jquery.js"></script>
+    <script src="{$ThemeDir}/dist/js/bootstrap.min.js"></script>
+    <script src="{$ThemeDir}/assets/js/holder.js"></script>
   </body>
 </html>
