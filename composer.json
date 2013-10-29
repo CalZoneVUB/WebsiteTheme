@@ -1,0 +1,17 @@
+{
+    "name": "CalZoneVUB/Website",
+    "description": "The SilverStripe theme for our collaboration website.",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme","calzone", "vub"],
+    "authors": [
+        {
+            "name": "Christophe Gaethofs",
+            "email": "christophe.gaethofs@gmail.be",
+            "role": "Webmaster"
+        }
+    ],
+    "require": {
+        "composer/installers": "*",
+        "silverstripe/framework": ">=3.0"
+    }
+}
