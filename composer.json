@@ -1,6 +1,6 @@
 {
     "name": "CalZoneVUB/WebsiteTheme",
-    "description": "The SilverStripe theme for our collaboration website.",
+    "description": "Het SilverStripe thema voor onze team website.",
     "type": "silverstripe-theme",
     "keywords": ["silverstripe", "theme","calzone", "vub"],
     "authors": [
