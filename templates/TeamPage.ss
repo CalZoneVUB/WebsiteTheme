@@ -3,7 +3,7 @@
   <head>
     <% base_tag %>
 	<title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
     $MetaTags(false)
@@ -45,5 +45,6 @@
     <script src="/~se2_1314/website/{$ThemeDir}/assets/js/jquery.js"></script>
     <script src="/~se2_1314/website/{$ThemeDir}/dist/js/bootstrap.min.js"></script>
     <script src="/~se2_1314/website/{$ThemeDir}/assets/js/holder.js"></script>
+
   </body>
 </html>
