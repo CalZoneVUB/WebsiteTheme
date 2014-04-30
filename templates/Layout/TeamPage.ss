@@ -26,7 +26,7 @@
 						<% if GSM %><p>$GSM</p><% end_if %>
 						<% if Skype %><p>Skype: $Skype</p><% end_if %>
 						<br>
-						<p><a href="#" class="btn btn-primary">Details</a> <% if $Up.CurrentMember.ID == $ID %><a href="$Up.getEditProfilePage.Link" class="btn btn-default">Bewerk</a><% end_if %></p>
+						<p><a href="./details/select/{$ID}/" class="btn btn-primary">Details</a> <% if $Up.CurrentMember.ID == $ID %><a href="$Up.getEditProfilePage.Link" class="btn btn-default">Bewerk</a><% end_if %></p>
 					</div>
 				</div>
 				<br>
@@ -44,7 +44,7 @@
 						<% if GSM %><p>$GSM</p><% end_if %>
 						<% if Skype %><p>Skype: $Skype</p><% end_if %>
 						<br>
-						<p><a href="#" class="btn btn-primary">Details</a> <% if $Up.CurrentMember.ID == $ID %><a href="$Up.getEditProfilePage.Link" class="btn btn-default">Bewerk</a><% end_if %></p>
+						<p><a href="./details/select/{$ID}/" class="btn btn-primary">Details</a> <% if $Up.CurrentMember.ID == $ID %><a href="$Up.getEditProfilePage.Link" class="btn btn-default">Bewerk</a><% end_if %></p>
 					</div>
 				</div>
 				<br>

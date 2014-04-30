@@ -88,6 +88,7 @@
 			$("#NewTimeLogDateTo").removeAttr("disabled");
 			$("#NewTimeLogTimeTo").removeAttr("disabled");
 			$("#doAddTimeLog").removeAttr("disabled");
+			$("#NewTimeLogActivity").removeAttr("disabled");
 		}
 		// Lock the input fields
 		function lockFields(){
@@ -98,6 +99,7 @@
 			$("#NewTimeLogDateTo").attr("disabled", "disabled");
 			$("#NewTimeLogTimeTo").attr("disabled", "disabled");
 			$("#doAddTimeLog").attr("disabled", "disabled");
+			$("#NewTimeLogActivity").attr("disabled", "disabled");
 		}
 		
 		// Submit a new service
@@ -106,12 +108,13 @@
 			lockFields();
 		
 			// Values
-			var title = $.trim($('#NewTimeLogTitle').val());
+			//var title = $.trim($('#NewTimeLogTitle').val());
 			var description = $.trim($('#NewTimeLogDescription').val());
 			var dFrom = $.trim($('#NewTimeLogDateFrom').val());
 			var tFrom = $.trim($('#NewTimeLogTimeFrom').val());
 			var dTo = $.trim($('#NewTimeLogDateTo').val());
 			var tTo = $.trim($('#NewTimeLogTimeTo').val());
+			var act = $.trim($('#NewTimeLogActivity').val());
 			
 			fd = dFrom.substr(0,2);
 			fm = dFrom.substr(3,2)-1;
@@ -136,25 +139,30 @@
 				//alert("'Tot' is niet correct.");
 				alertMessage('Datum:','Incorrecte "TOT" datum opgegeven.');
 				unlockFields();
-			} else if (title.length === 0){
+			/*} else if (title.length === 0){
 				// Display message
 				alertMessage('Input fout:','Titel mag niet leeg zijn.');
 				unlockFields();
-				return false;
+				return false;*/
 			} else if (description.length === 0){
 				// Display message
 				alertMessage('Input fout:','Beschrijving mag niet leeg zijn.');
 				unlockFields();
 				return false;
+			} else if (act.length==0 || act=="default"){
+				// Display message
+				alertMessage('Input fout:','Er moet een activiteit geselecteerd worden.');
+				unlockFields();
+				return false;
 			} else {
 				//alert("From: "+fDate+"- To: "+tDate);
-				unlockFields();
+				//unlockFields();
 				clearMessage();
 				jQuery.ajax({ 
 					type: "POST", 
-					url: 'http://wilma.vub.ac.be/~se2_1314/website/team/time-tracking/CreateNewTaskLog', 
+					url: 'https://wilma.vub.ac.be/~se2_1314/website/team/time-tracking/CreateNewTaskLog', 
 					data:  {
-						TITLE:	title,
+						ACTIVITY:	act,
 						DESCRIPTION: description,
 						FROM: fDate,
 						TO: tDate

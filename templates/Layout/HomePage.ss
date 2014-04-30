@@ -6,7 +6,18 @@
 	<div class="col-sm-4">
 		<div class="list-group">
 			<a class="list-group-item active">
-				<h2 class="list-group-item-heading">Quick Menu</h2>
+				<h2 class="list-group-item-heading">Applicatie</h2>
+			</a>
+			<a href="http://wilma.vub.ac.be:8181/calzone/" class="list-group-item">
+				<h4 class="list-group-item-heading">CalZone</h4>
+				<p class="list-group-item-text">Ga naar de online versie van de scheduler-applicatie.</p>
+			</a>
+		</div>
+
+
+		<div class="list-group">
+			<a class="list-group-item active">
+				<h2 class="list-group-item-heading">Portaal</h2>
 			</a>
 			<a href="http://wilma.vub.ac.be/~se2_1314/website/project/requirements-dashboard/" class="list-group-item">
 				<h4 class="list-group-item-heading">Requirements dashboard</h4>

@@ -36,13 +36,19 @@
 					<div class="modal-body">
 						<form role="form">
 						  <div class="form-group">
-							<label for="NewTileLogTitle">Titel</label>
-							<input type="email" class="form-control" id="NewTimeLogTitle" placeholder="Wat? Beknopte beschrijving">
-						  </div>
-						  <div class="form-group">
 							<label for="NewTimeLogDescription">Beschrijving</label>
-							<textarea id="NewTimeLogDescription" class="form-control" rows="3">Wat? Volledige beschrijving</textarea>
+							<textarea id="NewTimeLogDescription" class="form-control" rows="3"></textarea>
 						  </div>
+						  <% if AllActivities %>
+						  <div class="form-group">
+						  	<select id="NewTimeLogActivity" class="form-control">
+						  		<option value="default">(selecteer één activiteit)</option>
+						  		<% loop AllActivities %>
+								<option value="$Title">$Title</option>
+								<% end_loop %>
+							</select>
+						  </div>
+						  <% end_if %>
 						  <div class="form-group">
 							<label>Van</label><br>
 							<div class="col-lg-6">
@@ -83,7 +89,7 @@
 				<thead>
 					<tr>
 						<th>Wie?</th>
-						<th>Wat?</th>
+						<th>Activiteit</th>
 						<th>Van</th>
 						<th>Tot</th>
 						<th>Duur</th>
@@ -94,7 +100,7 @@
 					<% loop AllTimeLogs() %>
 					<tr>
 						<td>$Member.FirstName</td>
-						<td>$Title</td>
+						<td><% loop Activities %>$Title<% end_loop %></td>
 						<td>$From.Date $From.Time24</td>
 						<td>$To.Date $To.Time24</td>
 						<td>$Duration</td>
@@ -114,6 +120,7 @@
 								<p><strong>Van:</strong> $From.Date $From.Time24</p>
 								<p><strong>Tot:</strong> $To.Date $To.Time24</p>
 								<p><strong>Tijdsduur:</strong> $Duration</p>
+								<p><strong>Activiteit:</strong> <% loop Activities %><button class="btn btn-default">$Title</button> <% end_loop %></p>
 								<p><strong>Beschrijving:</strong> $Description</p>
 							</div>
 							<div class="modal-footer">

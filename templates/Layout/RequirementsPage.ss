@@ -13,7 +13,7 @@
 		
 		<% if Locked %>
 		<div class="alert alert-info">
-			<strong>Mededeling:</strong> deze functie is tijdelijk uitgeschakeld voor debugging.
+			<strong>Mededeling:</strong> dit onderdeel van de website wordt momenteel bijgewerkt.
 		</div>
 		<% else %>
 		<div class="page-header">
@@ -32,27 +32,35 @@
 				<tbody>
 					<tr>
 						<td>FR1</td>
-						<td>Niet-aangemelde gebruiker</td>
+						<td>User Management</td>
 					</tr>
 					<tr>
 						<td>FR2</td>
-						<td>Aangemelde student</td>
+						<td>Vakken</td>
 					</tr>
 					<tr>
 						<td>FR3</td>
-						<td>Aangemelde assistent</td>
+						<td>Lokalen</td>
 					</tr>
 					<tr>
 						<td>FR4</td>
-						<td>Aangemelde professor</td>
+						<td>Schedular</td>
 					</tr>
 					<tr>
 						<td>FR5</td>
-						<td>Aangemelde programmabeheerder</td>
+						<td>Lessenrooster</td>
 					</tr>
 					<tr>
 						<td>FR6</td>
-						<td>Scheduler</td>
+						<td>Programmabeheerder Tools</td>
+					</tr>
+					<tr>
+						<td>FR7</td>
+						<td>Mobiliteit</td>
+					</tr>
+					<tr>
+						<td>NFR1</td>
+						<td>Beveiliging</td>
 					</tr>
 				</tbody>
 			</table>

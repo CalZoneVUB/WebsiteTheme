@@ -24,23 +24,36 @@
 					</h2>
 				</div>
 			</div>
-			<% loop Deliverables %>
-			<div class="col-sm-4">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">$Title</h3>
+
+			<div class="col-md-12">
+				<div class="row">
+					<% loop AllDeliverables %>
+					<div class="col-sm-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">$Title</h3>
+							</div>
+							<div class="panel-body">
+									<p><strong> Deadline: </strong> $Deadline.Date - $Deadline.Time24</p>
+									<% if $Description %><p><strong> Beschrijving: </strong> $Description</p><% end_if %>
+									<% if $Version %><p><strong> Versie: </strong> $Version</p><br><% end_if %>
+								<% if $Document %>
+									<% with $Document %>
+										<a href="{$URL}" class="btn btn-primary">Download</a>
+									<% end_with %>
+								<% else %>
+										<a href="{$URL}" class="btn btn-primary">Download</a>
+								<% end_if %>
+							</div>
+						</div>
+					</div><!-- /.col-sm-4 -->
+					<% if $MultipleOf(3) %>
 					</div>
-					<div class="panel-body">
-							<p><strong> Deadline: </strong> $Deadline.Date - $Deadline.Time24</p>
-							<% if $Description %><p><strong> Beschrijving: </strong> $Description</p><% end_if %>
-							<% if $Version %><p><strong> Versie: </strong> $Version</p><br><% end_if %>
-						<% with $Document %>
-							<a href="{$URL}" class="btn btn-primary">Download</a>
-						<% end_with %>
-					</div>
+					<div class="row">
+					<% end_if %>
+					<% end_loop %>
 				</div>
-			</div><!-- /.col-sm-4 -->
-			<% end_loop %>
+			</div>
 		</div>
 		<% end_if %>
 		
