@@ -178,6 +178,88 @@
 				}
 			});
 			
+			//Fourth iter
+			$.ajax({
+				// have to use synchronous here, else the function 
+				// will return before the data is fetched
+				async: false,
+				url: "/~se2_1314/website/team/leden/ajaxFourthIter/",
+				dataType:"json",
+				success: function(data) {
+					var plot2 = $.jqplot('pie-iter-4', [data], { 
+						seriesDefaults: {
+							// Make this a pie chart.
+							renderer: jQuery.jqplot.PieRenderer, 
+								rendererOptions: {
+								  // Put data labels on the pie slices.
+								  // By default, labels show the percentage of the slice.
+								  showDataLabels: true
+								}
+							}, 
+							legend: {
+								show: true,
+								/*rendererOptions: {
+									numberRows: 10
+								},*/
+								location: 'e'
+							},
+							grid: {
+								drawBorder: false, 
+								drawGridlines: false,
+								background: '#ffffff',
+								shadow:false
+							}
+						}
+					);
+						chartName = 'pie-iter-4'
+						$('#' + chartName).unbind('jqplotDataClick');
+						$('#' + chartName).bind('jqplotDataClick', function (ev, seriesIndex, pointIndex, data) {
+						alert(plot2.series[seriesIndex].data[pointIndex]);
+					});
+				}
+			});
+			
+			//Fourth iter
+			$.ajax({
+				// have to use synchronous here, else the function 
+				// will return before the data is fetched
+				async: false,
+				url: "/~se2_1314/website/team/leden/ajaxTotal/",
+				dataType:"json",
+				success: function(data) {
+					var plot2 = $.jqplot('pie-total', [data], { 
+						seriesDefaults: {
+							// Make this a pie chart.
+							renderer: jQuery.jqplot.PieRenderer, 
+								rendererOptions: {
+								  // Put data labels on the pie slices.
+								  // By default, labels show the percentage of the slice.
+								  showDataLabels: true
+								}
+							}, 
+							legend: {
+								show: true,
+								/*rendererOptions: {
+									numberRows: 10
+								},*/
+								location: 'e'
+							},
+							grid: {
+								drawBorder: false, 
+								drawGridlines: false,
+								background: '#ffffff',
+								shadow:false
+							}
+						}
+					);
+						chartName = 'pie-total'
+						$('#' + chartName).unbind('jqplotDataClick');
+						$('#' + chartName).bind('jqplotDataClick', function (ev, seriesIndex, pointIndex, data) {
+						alert(plot2.series[seriesIndex].data[pointIndex]);
+					});
+				}
+			});
+			
 		});
 	</script>
 
